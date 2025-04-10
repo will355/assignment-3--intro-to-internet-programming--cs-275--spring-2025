@@ -18,7 +18,7 @@ main {
   display: inline-block;
   border-radius: 5px;
   background-color: #e0e0e0;
-  transition: background-color 0.3s ease;
+  transition: background-color .3s ease;
 }
 
 #js-triggers li a:hover {
@@ -31,24 +31,26 @@ main {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, .7);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity .5s ease-in-out;
   z-index: 1000;
 }
+
 .modal-panel.active {
   opacity: 1;
   pointer-events: all;
 }
+
 .modal-content-pane {
   background: white;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .4);
   width: 80%;
   height: 80%;
   max-width: 900px;
@@ -64,6 +66,7 @@ nav {
   background: #333;
   z-index: 900;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -71,14 +74,17 @@ nav ul {
   display: flex;
   background: #333;
 }
+
 nav ul li {
   position: relative;
   padding: 15px;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
 }
+
 nav ul ul {
   position: absolute;
   top: 100%;
@@ -88,29 +94,33 @@ nav ul ul {
   flex-direction: column;
   width: 150px;
 }
-nav.dropdown-active ul ul {
+
+.dropdown-active ul ul {
   display: flex;
 }
 
 @media (max-width: 736px) {
   nav {
-      left: auto;
-      right: -250px;
-      width: 250px;
-      height: 100vh;
-      background: #222;
-      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
-      transition: right 0.5s ease-in-out;
+    left: auto;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, .3);
+    transition: right .5s ease-in-out;
   }
-  nav.side-tray-active {
-      right: 0;
+
+  .side-tray-active {
+    right: 0;
   }
+
   nav ul {
-      flex-direction: column;
-      padding-top: 20px;
+    flex-direction: column;
+    padding-top: 20px;
   }
+
   nav ul li {
-      padding: 10px;
-      text-align: left;
+    padding: 10px;
+    text-align: left;
   }
 }
